@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-pinterest{
+    display: grid;
+    grid-template-columns: 5% 10% 10% 10% 45% repeat(3,5%);
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    height: 50px;
+    z-index: 1;
+}
+
+.menu_button{
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+    height: 40px;
+}
+
+#i{
+    color: white;
+    background-color: black;
+}
+
+h2 , a{
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   margin: -15% 0 0 -25%;
+   padding: 5%;
+}
+
+.finder{
+    width: 600px;
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 30px; /* Ajusta el espacio para el icono */
+} 
+
+.input-container {
+    position: relative;  
+}
+
+.iconoLupa{
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    padding-top: 4%;
+    transform: translateY(-50%);
+    color: #555; /* Color del icono */
+}
+
+.iconos{
+    justify-items: center;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.iconos:hover{
+    filter: opacity(50%);
+    cursor: pointer;
+
+}
+
+.container{  
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.item{
+    position: relative;
+    width: 16%;
+    height: 100vh;
+    /*display: flex;
+    flex-direction: column;*/
+}
+  
+.image{
+    width: 200px;
+    
+    border-radius: 10px;
+}
+
+.image:hover{
+    filter: opacity(50%);
+}
+
+.btn-image{
+    position: relative;
+}
+
+.btnGuardar{
+    visibility: hidden;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    
+}
+
+.iconos-mas{
+    visibility: hidden;
+    height: 20px;
+    width: 20px;
+
+}
+
+.iconos-subir{
+    visibility: hidden;
+    height: 20px;
+    width: 20px;
+}
+
+.card-image:hover .btnGuardar{
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+    left: 130px;
+    top: 30px;
+
+}
+
+.card-image:hover .btn-image .iconos-subir{
+    visibility: visible;
+    position: relative;
+   width: 20px;
+   height: 20px;
+   left: 110px;
+   bottom: 50px;
+    z-index: 1;
+}
+.card-image:hover .btn-image .iconos-mas{
+    visibility: visible;
+    position: relative;
+    bottom: 50px;
+    height: 20px;
+    width: 20px;
+    left: 170px;
+    z-index: 1;
+}
+
+@media screen and (max-width:400) {
+    .navbar{
+        width: 100%;
+        grid-template-columns: repeat(8,12%);
+    }
+
+    .finder{
+        width: 12%;
+        height: 40px;
+    } 
+
+    .container{
+        padding-top: 60px;
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+}
